@@ -82,6 +82,9 @@ func runCommandOnChange(filename string, nap time.Duration, bailOnError bool, co
 		)
 
 		cmd := exec.Command(command[0], args...)
+		cmd.Stdin = os.Stdin
+		cmd.Stdout = os.Stdout
+		cmd.Stderr = os.Stderr
 		cmd.Env = os.Environ()
 		cmd.Env = append(cmd.Env,
 			"OLD_CONNECTED_STATE="+delta.Old.Connection,
