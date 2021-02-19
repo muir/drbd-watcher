@@ -15,7 +15,7 @@ cd $GOPATH/src/github.com/muir
 git clone https://github.com/muir/drbd-watcher.git
 cd drbd-watcher
 /snap/bin/go install ./...
-sudo cp $GOBIN/drdb-watcher /usr/local/bin/
+sudo cp $GOBIN/drbd-watcher /usr/local/bin/
 ```
 
 ## Running the watcher
