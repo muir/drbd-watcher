@@ -82,7 +82,7 @@ func Watch(filename string, oldStates States, nap time.Duration) (States, States
 }
 
 var re = regexp.MustCompile(`^ (\d+): cs:(\S+) ro:(\S+?)/(\S+) ds:(\S+)/(\S+) `)
-var skipRE = regexp.MustCompile(`\s+ns:\d+ `)
+var skipRE = regexp.MustCompile(`^\s+(?:ns:\d+ |\[\=*\>\.*\] sync'ed|finish: \d)`)
 
 func getStates(filename string) (States, error) {
 	fh, err := os.Open(filename)

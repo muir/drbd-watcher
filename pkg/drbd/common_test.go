@@ -83,6 +83,22 @@ srcversion: 15111D056BF899E7D986DDD
     ns:0 nr:0 dw:0 dr:0 al:0 bm:0 lo:0 pe:0 ua:0 ap:0 ep:1 wo:f oos:2649072
 `
 
+const exampleProcDRBD2 = `version: 8.4.11 (api:1/proto:86-101)
+srcversion: FC3433D849E3B88C1E7B55C
+ 0: cs:SyncSource ro:Primary/Secondary ds:UpToDate/Inconsistent C r-----
+    ns:56582812 nr:0 dw:156299240 dr:71719920 al:1524 bm:0 lo:0 pe:0 ua:0 ap:0 ep:1 wo:f oos:106597444
+        [=====>..............] sync'ed: 34.7% (104096/159172)M
+        finish: 0:53:57 speed: 32,924 (30,140) K/sec
+ 1: cs:SyncSource ro:Primary/Secondary ds:UpToDate/Inconsistent C r-----
+    ns:11974408 nr:0 dw:540488000 dr:13652852 al:3316 bm:0 lo:1 pe:0 ua:0 ap:0 ep:1 wo:f oos:512191896
+        [>....................] sync'ed:  2.3% (500184/511704)M
+        finish: 12:01:41 speed: 11,812 (11,052) K/sec
+ 2: cs:SyncSource ro:Primary/Secondary ds:UpToDate/Inconsistent C r-----
+    ns:2740340 nr:0 dw:1310467600 dr:4758343 al:24 bm:0 lo:1 pe:0 ua:0 ap:0 ep:1 wo:f oos:1433206068
+        [>....................] sync'ed:  0.2% (1399612/1402120)M
+        finish: 181:44:49 speed: 2,180 (2,404) K/sec
+`
+
 const exampleProcMounts = `sysfs /sys sysfs rw,nosuid,nodev,noexec,relatime 0 0
 proc /proc proc rw,nosuid,nodev,noexec,relatime 0 0
 udev /dev devtmpfs rw,nosuid,relatime,size=4052576k,nr_inodes=1013144,mode=755 0 0
